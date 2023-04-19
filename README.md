@@ -6,6 +6,8 @@
 ```go
 Items() []T // Get all items from collection
 Each(func(item T)) // Walk over items and do something
+Count() int // Get total items
+IsEmpty() bool // Check if collection has no items
 ```
 
 ### Examples

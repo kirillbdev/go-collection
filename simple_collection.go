@@ -19,3 +19,11 @@ func (c *SimpleCollection[T]) Each(fn func(item T)) {
 		fn(it)
 	}
 }
+
+func (c *SimpleCollection[T]) Count() int {
+	return len(c.items)
+}
+
+func (c *SimpleCollection[T]) IsEmpty() bool {
+	return len(c.items) == 0
+}
