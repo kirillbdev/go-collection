@@ -13,3 +13,9 @@ func NewSimpleCollection[T any](items []T) *SimpleCollection[T] {
 func (c *SimpleCollection[T]) Items() []T {
 	return c.items
 }
+
+func (c *SimpleCollection[T]) Each(fn func(item T)) {
+	for _, it := range c.items {
+		fn(it)
+	}
+}
