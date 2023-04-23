@@ -1,6 +1,9 @@
 package collection
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 type countTestPair struct {
 	items    []int
@@ -17,11 +20,7 @@ func TestSimpleCollection_Count(t *testing.T) {
 
 	for _, pair := range testPairs {
 		var c Collection[int] = NewSimpleCollection(pair.items)
-		count := c.Count()
-
-		if count != pair.expected {
-			t.Error("Expected ", pair.expected, " got ", count)
-		}
+		assert.Equal(t, pair.expected, c.Count())
 	}
 }
 
@@ -39,10 +38,6 @@ func TestSimpleCollection_IsEmpty(t *testing.T) {
 
 	for _, pair := range testPairs {
 		var c Collection[int] = NewSimpleCollection(pair.items)
-		empty := c.IsEmpty()
-
-		if empty != pair.isEmpty {
-			t.Error("Expected ", pair.isEmpty, " got ", empty)
-		}
+		assert.Equal(t, pair.isEmpty, c.IsEmpty())
 	}
 }
