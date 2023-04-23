@@ -1,6 +1,12 @@
-## This is a draft. Do not use in production if you found this package.
+go-collection
+=======
 
-### Generic collections library for common usage
+[![Go Report Card](https://goreportcard.com/badge/github.com/kirillbdev/go-collection)](https://goreportcard.com/report/github.com/kirillbdev/go-collection)
+
+Generic collections library for common usage
+
+### This is a draft. Do not use in production if you found this package.
+
 
 ### Contract
 ```go
