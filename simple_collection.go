@@ -27,3 +27,13 @@ func (c *SimpleCollection[T]) Count() int {
 func (c *SimpleCollection[T]) IsEmpty() bool {
 	return len(c.items) == 0
 }
+
+func (c *SimpleCollection[T]) Map(fn func(item T) any) Collection[any] {
+	var result []interface{}
+
+	for _, it := range c.items {
+		result = append(result, fn(it))
+	}
+
+	return NewSimpleCollection(result)
+}
