@@ -7,7 +7,6 @@ Generic based collections library for common usage.
 
 #### This module is on develop stage. Use it in production at one's own risk.
 
-
 ### How to use
 Library contains collection interface with next declaration
 ```go
